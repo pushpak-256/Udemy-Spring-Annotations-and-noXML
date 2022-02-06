@@ -8,7 +8,7 @@ import com.pushpak.springDemo.Fortune.FortuneService;
 @Component
 public class TennisCoach implements Coach {
 
-	// constructor
+	// constructor //constructor Injection
 	@Autowired
 	public TennisCoach(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
@@ -22,7 +22,7 @@ public class TennisCoach implements Coach {
 		
 		@Override
 		public String getDailyFortune() {
-			return fortuneService.getDailyFortune();
+			return "{ TT } " + fortuneService.getDailyFortune();
 	
 	}
 

@@ -20,7 +20,7 @@ public class AnnotationDemoApp {
 		
 		//practiceActivity#4
 		Coach codingCoach = context.getBean("codingCoach",Coach.class);
-		System.out.println("\n"+codingCoach.getDailyWorkout());
+		System.out.println("\n"+codingCoach.getDailyWorkout()+"\n"+codingCoach.getDailyFortune());
 		
 	//4. Close Context
 		context.close();
