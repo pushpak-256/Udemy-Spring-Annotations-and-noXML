@@ -15,12 +15,16 @@
 	</bean>
 
 	<!-- add entry to enable component scanning -->
+
 	<context:component-scan
 		base-package="com.pushpak.springDemo" />
-	<context:component-scan
-		base-package="com.pushpak.springDemo.Coaches" />
 
-
+<!-- Don't need following sub-packages to configured, if parent package is already configured -->
+<!-- 	<context:component-scan -->
+<!-- 		base-package="com.pushpak.springDemo.Coaches" /> -->
+<!-- 	<context:component-scan -->
+<!-- 		base-package="com.pushpak.springDemo.Fortune" /> -->
+	
 </beans>
 
 

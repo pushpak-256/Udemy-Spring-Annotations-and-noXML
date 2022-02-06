@@ -10,4 +10,9 @@ public class CodingCoach implements Coach {
 		return "{cc} "+"Do coding for atleat 3 hours daily.";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		return null;
+	}
+
 }
