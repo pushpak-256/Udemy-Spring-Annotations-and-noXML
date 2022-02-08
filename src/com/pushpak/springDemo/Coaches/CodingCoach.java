@@ -1,6 +1,7 @@
 package com.pushpak.springDemo.Coaches;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.pushpak.springDemo.Fortune.FortuneService;
@@ -12,7 +13,7 @@ public class CodingCoach implements Coach {
 
 	// setterInjection
 	// method Injection (with any name to Setter method)
-	@Autowired
+	@Autowired @Qualifier("randomFortuneSev")
 	public void doSomeCrazyStuff(FortuneService fortuneService) {
 		System.out.println("inside doSomeCrazyStuff");
 		this.fortuneService = fortuneService;
@@ -25,7 +26,7 @@ public class CodingCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		return "{cc}" + fortuneService.getDailyFortune();
+		return "{cc} " + fortuneService.getDailyFortune();
 	}
 
 	public CodingCoach(FortuneService fortuneService) {

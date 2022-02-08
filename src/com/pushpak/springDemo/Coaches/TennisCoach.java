@@ -1,6 +1,7 @@
 package com.pushpak.springDemo.Coaches;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.pushpak.springDemo.Fortune.FortuneService;
@@ -8,7 +9,7 @@ import com.pushpak.springDemo.Fortune.FortuneService;
 @Component
 public class TennisCoach implements Coach {
 
-	@Autowired
+	@Autowired @Qualifier("randomFortuneSev")
 	private FortuneService fortuneService;
 
 	// constructor //constructor Injection
