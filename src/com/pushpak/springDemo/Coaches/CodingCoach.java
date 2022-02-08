@@ -7,24 +7,25 @@ import com.pushpak.springDemo.Fortune.FortuneService;
 
 @Component
 public class CodingCoach implements Coach {
-  
+
 	private FortuneService fortuneService;
-	
-	//setterInjection
+
+	// setterInjection
+	// method Injection (with any name to Setter method)
 	@Autowired
-	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println("inside setter");
+	public void doSomeCrazyStuff(FortuneService fortuneService) {
+		System.out.println("inside doSomeCrazyStuff");
 		this.fortuneService = fortuneService;
 	}
 
 	@Override
 	public String getDailyWorkout() {
-		return "{cc} "+"Do coding for atleat 3 hours daily.";
+		return "{cc} " + "Do coding for atleat 3 hours daily.";
 	}
 
 	@Override
 	public String getDailyFortune() {
-		return "{cc}"+fortuneService.getDailyFortune();
+		return "{cc}" + fortuneService.getDailyFortune();
 	}
 
 	public CodingCoach(FortuneService fortuneService) {
@@ -35,5 +36,4 @@ public class CodingCoach implements Coach {
 		System.out.println("no-arg Constructor called");
 	}
 
-	
 }

@@ -8,22 +8,24 @@ import com.pushpak.springDemo.Fortune.FortuneService;
 @Component
 public class TennisCoach implements Coach {
 
-	// constructor //constructor Injection
 	@Autowired
-	public TennisCoach(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	private FortuneService fortuneService;
+
+	// constructor //constructor Injection
+//	@Autowired
+//	public TennisCoach(FortuneService fortuneService) {
+//		this.fortuneService = fortuneService;
+//	}
+
+	@Override
+	public String getDailyWorkout() {
+		return "{ TT } " + " Do 30 min Running ";
 	}
 
-		private FortuneService fortuneService;
-		@Override
-		public String getDailyWorkout() {
-			return "{ TT } "+" Do 30 min Running ";
-		}
-		
-		@Override
-		public String getDailyFortune() {
-			return "{ TT } " + fortuneService.getDailyFortune();
-	
+	@Override
+	public String getDailyFortune() {
+		return "{ TT } " + fortuneService.getDailyFortune();
+
 	}
 
 }
