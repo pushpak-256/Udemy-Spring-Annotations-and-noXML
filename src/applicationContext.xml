@@ -7,6 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!-- load properties file (sport.properties) -->
+  <context:property-placeholder location ="classpath:sport.properties"/>
+
 	<!-- logging configurations -->
 	<bean id="myLoggerConfig" class="LoggerFiles.MyLoggerConfig"
 		init-method="initLogger">

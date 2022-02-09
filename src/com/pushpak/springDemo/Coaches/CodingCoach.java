@@ -15,7 +15,7 @@ public class CodingCoach implements Coach {
 	// method Injection (with any name to Setter method)
 	@Autowired @Qualifier("randomFortuneSev")
 	public void doSomeCrazyStuff(FortuneService fortuneService) {
-		System.out.println("inside doSomeCrazyStuff");
+		System.out.println("{CC}  inside doSomeCrazyStuff");
 		this.fortuneService = fortuneService;
 	}
 
@@ -34,7 +34,7 @@ public class CodingCoach implements Coach {
 	}
 
 	public CodingCoach() {
-		System.out.println("no-arg Constructor called");
+		System.out.println("{CC } no-arg Constructor called");
 	}
 
 }

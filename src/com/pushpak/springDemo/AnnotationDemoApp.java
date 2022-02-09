@@ -3,6 +3,7 @@ package com.pushpak.springDemo;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.pushpak.springDemo.Coaches.Coach;
+import com.pushpak.springDemo.Coaches.TennisCoach;
 
 public class AnnotationDemoApp {
 
@@ -13,10 +14,12 @@ public class AnnotationDemoApp {
 		= new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 	//2. Retrive Bean from Spring config File
-		Coach theCoach  =context.getBean("tennisCoach",Coach.class);
+		TennisCoach theCoach  =context.getBean("tennisCoach",TennisCoach.class);
 		
 	//3. Use Bean, methods
 		System.out.println(theCoach.getDailyWorkout()+"\n"+theCoach.getDailyFortune());
+		System.out.println("{TT} Team :- "+theCoach.getTeam()+"\t Email :- "+theCoach.getEmail());
+		
 		
 		//practiceActivity#4
 		Coach codingCoach = context.getBean("codingCoach",Coach.class);
