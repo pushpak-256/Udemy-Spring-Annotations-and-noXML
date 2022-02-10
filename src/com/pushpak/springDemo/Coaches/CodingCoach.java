@@ -13,7 +13,7 @@ public class CodingCoach implements Coach {
 
 	// setterInjection
 	// method Injection (with any name to Setter method)
-	@Autowired @Qualifier("randomFortuneSev")
+	@Autowired @Qualifier("activity#5")
 	public void doSomeCrazyStuff(FortuneService fortuneService) {
 		System.out.println("{CC}  inside doSomeCrazyStuff");
 		this.fortuneService = fortuneService;
