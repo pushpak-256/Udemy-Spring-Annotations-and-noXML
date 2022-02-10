@@ -13,9 +13,9 @@ public class TennisCoach implements Coach {
 	@Autowired @Qualifier("randomFortuneSev")
 	private FortuneService fortuneService;
 
-	// constructor //constructor Injection
+	// constructor //constructor Injection  //we cant use @Qualifier with Constructor
 //	@Autowired 
-//	public TennisCoach(FortuneService fortuneService) {
+//	public TennisCoach(@Qualifier("randomFortuneSev")FortuneService fortuneService) {
 //		System.out.println("{Tennis} arg Constructor");
 //		this.fortuneService = fortuneService;
 //	}
