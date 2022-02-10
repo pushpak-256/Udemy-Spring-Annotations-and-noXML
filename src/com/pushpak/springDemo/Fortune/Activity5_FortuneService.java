@@ -6,8 +6,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.ResourceBundle;
-
 import javax.annotation.PostConstruct;
+
 
 import org.springframework.stereotype.Component;
 
@@ -19,6 +19,7 @@ public class Activity5_FortuneService implements FortuneService {
 	
 	public Activity5_FortuneService() {
 		// will load Fortune form file when bean is created
+
 		//getFortuneList();
 	}
 
