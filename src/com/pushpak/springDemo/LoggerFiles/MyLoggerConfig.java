@@ -1,4 +1,4 @@
-package LoggerFiles;
+package com.pushpak.springDemo.LoggerFiles;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;

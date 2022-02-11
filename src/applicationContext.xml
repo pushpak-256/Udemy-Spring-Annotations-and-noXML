@@ -11,7 +11,7 @@
   <context:property-placeholder location ="classpath:sport.properties"/>
 
 	<!-- logging configurations -->
-	<bean id="myLoggerConfig" class="LoggerFiles.MyLoggerConfig"
+	<bean id="myLoggerConfig" class="com.pushpak.springDemo.LoggerFiles.MyLoggerConfig"
 		init-method="initLogger">
 		<property name="rootLoggerLevel" value="FINE" />
 		<property name="printedLoggerLevel" value="FINE" />
