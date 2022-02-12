@@ -7,8 +7,7 @@ public class RestFortuneSev implements FortuneService {
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Reset Saturday- Sunday";
 	}
 
 }
