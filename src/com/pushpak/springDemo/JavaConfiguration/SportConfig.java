@@ -12,6 +12,7 @@ import com.pushpak.springDemo.LoggerFiles.MyLoggerConfiguration;
 
 @Configuration
 @PropertySource("classpath:mylogger.properties")
+@PropertySource("classpath:sport.properties")
 //@ComponentScan("com.pushpak.springDemo")
 public class SportConfig {
 
