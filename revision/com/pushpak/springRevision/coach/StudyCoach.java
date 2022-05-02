@@ -1,6 +1,7 @@
 package com.pushpak.springRevision.coach;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.pushpak.springRevision.fortuneServices.FortuneService;
@@ -13,6 +14,7 @@ public class StudyCoach implements Coach
     private FortuneService fortuneService;
     
     @Autowired   //method name can be anything , doSomeCrazyStuff etc
+    @Qualifier("randomFortuneService") //telling container which implementation we want
     public void setFortuneService(FortuneService fortuneService)
     {
         this.fortuneService = fortuneService;
