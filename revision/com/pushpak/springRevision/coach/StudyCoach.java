@@ -12,4 +12,10 @@ public class StudyCoach implements Coach
 	return "{study} Read for 10 min";
     }
 
+    @Override
+    public String getDailyFortune()
+    {
+	return null;
+    }
+
 }

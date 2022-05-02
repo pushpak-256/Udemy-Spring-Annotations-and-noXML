@@ -16,6 +16,8 @@ public class App
 	
 	System.out.println("Workout :"+c1.getDailyWorkOut());
 	System.out.println("Workout :"+c2.getDailyWorkOut());
+	
+	System.out.println("\nFortune :"+c1.getDailyFortune());
        
 	context.close();
     }
