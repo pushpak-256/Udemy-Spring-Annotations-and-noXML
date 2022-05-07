@@ -2,10 +2,12 @@ package com.pushpak.springRevision.coach;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.pushpak.springRevision.fortuneServices.FortuneService;
 
+@Scope("prototype")
 @Component // if id not specified for this.bean , default will be class name starting with lower case
 public class StudyCoach implements Coach
 {

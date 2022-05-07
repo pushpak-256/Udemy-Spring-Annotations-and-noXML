@@ -14,6 +14,7 @@ public class App
 	
 	Coach c1 = context.getBean("boxing",Coach.class );
 	Coach c2 = context.getBean("studyCoach",Coach.class);
+	Coach c3 = context.getBean("studyCoach",Coach.class);
 	ChessCoach chessCoach = context.getBean("chessCoach",ChessCoach.class);
 	
 	System.out.println("Workout :"+c1.getDailyWorkOut());
@@ -27,6 +28,9 @@ public class App
 	//literal Injection Demo
 	System.out.println("\nTeam"+chessCoach.getTeam());
 	System.out.println("\nEmail"+chessCoach.getEmail());
+	
+	//bean Scope Test // StudyCoach Scope changed to  prototype
+	System.out.println("\nAre Study Coach Objects same : "+(c2==c3));
 	context.close();
     }
 
